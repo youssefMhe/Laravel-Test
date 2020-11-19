@@ -14,7 +14,7 @@ class EquipeController extends Controller
      */
     public function index()
     {   $par_page =3;
-        $all = Equipe::orderBy('id','asc')->paginate($par_page);
+        $all = Equipe::orderBy('id','desc')->paginate($par_page);
         return view('equipe.index',['all'=>$all]);
     }
 
@@ -25,7 +25,7 @@ class EquipeController extends Controller
      */
     public function create()
     {
-        //
+        return view('equipe.create');
     }
 
     /**
@@ -36,7 +36,11 @@ class EquipeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //var_dump($request->all());
+        $e = new Equipe();
+        $e->nom = $request->nom;
+        $e->save();
+        return redirect()->route('Equipe.index')->with('message','l equipe est ajouté avec success');
     }
 
     /**

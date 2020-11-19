@@ -1,6 +1,13 @@
 @extends('home')
 
 @section('contenu')
+    <br>
+    @if(session('message'))
+        <div class="alert-success">
+            {{session('message')}}
+        </div>
+    @endif
+    <br>
 
     <h1 class="font-weight-bold">Liste des Equipes </h1>
 

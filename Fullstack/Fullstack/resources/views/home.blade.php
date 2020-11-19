@@ -25,7 +25,7 @@
 
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                                 <a href="{{route('Equipe.index')}}" class="dropdown-item"> Show</a>
-                                <a class="dropdown-item" type="button">Add</a>
+                                <a href="{{route('Equipe.create')}}"class="dropdown-item" type="button">Add</a>
                                 <a class="dropdown-item" type="button">Edit</a>
                                 <a class="dropdown-item" type="button">Delet</a>
                             </div>
