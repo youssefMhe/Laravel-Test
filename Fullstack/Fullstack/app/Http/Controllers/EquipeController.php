@@ -72,12 +72,18 @@ class EquipeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Equipe  $equipe
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Equipe $equipe)
+    public function update(Request $request, $id)
     {
-        //
+        //return redirect('category')->with('message','Catégorie modifiée avec succès');
+        
+        $c= Equipe::find($id);
+        $c->nom=$request->nom;
+        $c->updated_at=now();
+        $c->save();
+        return redirect()->route('Equipe.index')->with('message',' equipe modifiée avec succès');
     }
 
     /**
