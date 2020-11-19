@@ -38,9 +38,10 @@
                             Match
                          </button>
                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <a class="dropdown-item" type="button">Add</a>
-                            <a class="dropdown-item" type="button">Edit</a>
-                            <a class="dropdown-item" type="button">Delet</a>
+                                  <a href="{{route('Match.index')}}" class="dropdown-item"> Show</a>
+                                  <a class="dropdown-item" type="button">Add</a>
+                                  <a class="dropdown-item" type="button">Edit</a>
+                                  <a class="dropdown-item" type="button">Delet</a>
                              </div>
                         </div>
 
