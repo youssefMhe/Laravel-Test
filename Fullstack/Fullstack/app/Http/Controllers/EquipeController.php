@@ -58,14 +58,14 @@ class EquipeController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Equipe  $equipe
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Equipe $equipe)
+    public function edit($id)
     {
-        //
+        return view('Equipe.edit')->with('id',$id);
     }
 
     /**
@@ -83,11 +83,12 @@ class EquipeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Equipe  $equipe
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Equipe $equipe)
+    public function destroy( $id)
     {
-        //
+        Equipe::find($id)->delete();
+        return redirect()->route('Equipe.index')->with('message',' l equipe est supprimée');
     }
 }

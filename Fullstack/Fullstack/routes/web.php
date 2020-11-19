@@ -22,5 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/Equipe', EquipeController::class);
-Route::resource('/Match', MatchController::class);
+Route::resource('/Equipe', EquipeController::class)->middleware('auth');;
+Route::resource('/Match', MatchController::class)->middleware('auth');;

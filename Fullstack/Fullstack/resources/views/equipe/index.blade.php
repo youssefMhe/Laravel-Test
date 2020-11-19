@@ -24,14 +24,50 @@
         </thead>
         <tbody>
 
-        @foreach($all as $equipe)
+        @foreach($all as $equ)
         <tr>
-            <th scope="row">{{$equipe->id}}</th>
-            <td>{{$equipe->nom}}</td>
-            <td>{{$equipe->created_at}}</td>
-            <td>{{$equipe->updated_at}}</td>
-            <td>@fat</td>
+            <th scope="row">{{$equ->id}}</th>
+            <td>{{$equ->nom}}</td>
+            <td>{{$equ->created_at}}</td>
+            <td>{{$equ->updated_at}}</td>
+            <td>
+                <a href="{{route('Equipe.edit', $equ->id)}}" class="btn btn-primary">Edit</a>
+                <a data-target="#delete{{$equ->id}}" href="#" class="btn btn-danger" data-toggle="modal" > Delete</a>
+
+            </td>
+
+
+
+        <!-- Modal delete -->
+        <form action="{{route('Equipe.destroy', $equ->id )}}" method="post">
+            @method('delete')
+            @csrf
+
+
+        <div class="modal fade" id="delete{{$equ->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">delete Equipe</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        voulez vous vraiment delete l equipe {{$equ->nom}} ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+
         </tr>
+
+
         @endforeach
 
         </tbody>

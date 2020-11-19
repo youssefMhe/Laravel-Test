@@ -19,13 +19,13 @@
         </div>
 
     </div>
-    
+
     <form method="post" action="{{route('Equipe.store')}}">
     <div class="form-group"  >
         @csrf
 
         <label for="exampleInputPassword1">Nom  de l'equipe</label>
-        <input type="text" name="nom" class="form-control" id="exampleInputPassword1" placeholder="Nom">
+        <input type="text" name="nom" class="form-control" id="exampleInputPassword1" placeholder="Nom" value="{{old('nom')}}">
     </div>
 
     <input type="submit" value="add" class="btn btn-primary"/>
