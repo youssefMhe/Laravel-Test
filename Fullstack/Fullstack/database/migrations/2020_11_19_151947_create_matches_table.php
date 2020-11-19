@@ -15,10 +15,13 @@ class CreateMatchesTable extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
+            $table->string('Score');
             $table->bigInteger('equipe_locaux_id')->unsigned();
             $table->bigInteger('equipe_visiteurs_id')->unsigned();
-            $table->bigInteger('user_id')->unsigned();
-            $table->string('Score');
+
+            $table->foreign('equipe_locaux_id')->references('id')->on('equipes')->onDelete('cascade');
+            $table->foreign('equipe_visiteurs_id')->references('id')->on('equipes')->onDelete('cascade');
+
 
             $table->timestamps();
         });
