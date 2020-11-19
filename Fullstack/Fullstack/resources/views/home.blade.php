@@ -18,27 +18,34 @@
                             <a class="navbar-brand" href="#">Welcome You are logged in! </a>
                         </nav>
 
-                        <div class="dropdown">
+                        <div class="dropdown col-md-5" >
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Equipe
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Add</button>
-                                <button class="dropdown-item" type="button">Edit</button>
-                                <button class="dropdown-item" type="button">Delet</button>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                <a href="{{route('Equipe.index')}}" class="dropdown-item"> Show</a>
+                                <a class="dropdown-item" type="button">Add</a>
+                                <a class="dropdown-item" type="button">Edit</a>
+                                <a class="dropdown-item" type="button">Delet</a>
                             </div>
 
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Match
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Add</button>
-                                <button class="dropdown-item" type="button">Edit</button>
-                                <button class="dropdown-item" type="button">Delet</button>
-                            </div>
+                        </div>
+                        <br>
+
+                        <div class="dropdown col-md-5">
+                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Match
+                         </button>
+                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <a class="dropdown-item" type="button">Add</a>
+                            <a class="dropdown-item" type="button">Edit</a>
+                            <a class="dropdown-item" type="button">Delet</a>
+                             </div>
                         </div>
 
                 </div>
+                @yield('contenu')
 
             </div>
         </div>

@@ -14,7 +14,7 @@ class EquipeController extends Controller
      */
     public function index()
     {
-        //
+        return view('equipe.index');
     }
 
     /**

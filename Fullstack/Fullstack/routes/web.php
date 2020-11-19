@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EquipeController;
+use App\Http\Controllers\MatchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/Equipe', \App\Http\Controllers\EquipeController::class);
-Route::resource('/Match', \App\Http\Controllers\MatchController::class);
+Route::resource('/Equipe', EquipeController::class);
+Route::resource('/Match', MatchController::class);
