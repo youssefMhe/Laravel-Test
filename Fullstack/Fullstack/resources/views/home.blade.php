@@ -14,8 +14,32 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                        <nav class="navbar navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Welcome You are logged in! </a>
+                        </nav>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Equipe
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">Add</button>
+                                <button class="dropdown-item" type="button">Edit</button>
+                                <button class="dropdown-item" type="button">Delet</button>
+                            </div>
+
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Match
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">Add</button>
+                                <button class="dropdown-item" type="button">Edit</button>
+                                <button class="dropdown-item" type="button">Delet</button>
+                            </div>
+                        </div>
+
                 </div>
+
             </div>
         </div>
     </div>

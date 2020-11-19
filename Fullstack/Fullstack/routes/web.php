@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/Equipe', \App\Http\Controllers\EquipeController::class);
+Route::resource('/Match', \App\Http\Controllers\MatchController::class);
