@@ -17,7 +17,7 @@
         </thead>
         <tbody>
 
-        @foreach(\App\Models\Equipe::all() as $equipe)
+        @foreach($all as $equipe)
         <tr>
             <th scope="row">{{$equipe->id}}</th>
             <td>{{$equipe->nom}}</td>
@@ -29,5 +29,6 @@
 
         </tbody>
     </table>
+    {{ $all->links('pagination::bootstrap-4') }}
 
 @endsection

@@ -13,8 +13,9 @@ class EquipeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('equipe.index');
+    {   $par_page =3;
+        $all = Equipe::orderBy('id','asc')->paginate($par_page);
+        return view('equipe.index',['all'=>$all]);
     }
 
     /**
