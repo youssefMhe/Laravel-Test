@@ -18,7 +18,7 @@
         </thead>
         <tbody>
 
-        @foreach(\App\Models\Match::all() as $match)
+        @foreach($all as $match)
             <tr>
                 <th scope="row">{{$match->id}}</th>
                 <td>{{$match->score}}</td>
@@ -32,5 +32,6 @@
 
         </tbody>
     </table>
+    {{ $all->links('pagination::bootstrap-4') }}
 
 @endsection

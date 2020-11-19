@@ -13,8 +13,9 @@ class MatchController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('match.index');
+    {$par_page =2;
+        $all = Match::orderBy('id','asc')->paginate($par_page);
+        return view('match.index',['all'=>$all]);
     }
 
     /**
