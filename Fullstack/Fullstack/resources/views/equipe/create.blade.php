@@ -1,7 +1,25 @@
 @extends('home')
 
 @section('contenu')
+
+
     <h2 class="font-weight-bold">ajouter une Equipe </h2>
+
+    <div class="row">
+        <div class="col-md-5">
+            @if(count($errors))
+                <div class="alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $m)
+                            <li> {{$m}} </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
+
+    </div>
+    
     <form method="post" action="{{route('Equipe.store')}}">
     <div class="form-group"  >
         @csrf

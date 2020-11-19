@@ -36,7 +36,10 @@ class EquipeController extends Controller
      */
     public function store(Request $request)
     {
-       //var_dump($request->all());
+        $request->validate([
+             'nom'=>'required|unique:equipes|max:20|min:2' // methode de controle direct
+         ]);
+
         $e = new Equipe();
         $e->nom = $request->nom;
         $e->save();
