@@ -78,7 +78,7 @@ class EquipeController extends Controller
     public function update(Request $request, $id)
     {
         //return redirect('category')->with('message','Catégorie modifiée avec succès');
-        
+
         $c= Equipe::find($id);
         $c->nom=$request->nom;
         $c->updated_at=now();

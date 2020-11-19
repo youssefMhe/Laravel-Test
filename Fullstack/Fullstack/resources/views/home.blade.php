@@ -26,8 +26,6 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                                 <a href="{{route('Equipe.index')}}" class="dropdown-item"> Show</a>
                                 <a href="{{route('Equipe.create')}}"class="dropdown-item" type="button">Add</a>
-                                <a class="dropdown-item" type="button">Edit</a>
-                                <a class="dropdown-item" type="button">Delet</a>
                             </div>
 
                         </div>
@@ -40,8 +38,7 @@
                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                   <a href="{{route('Match.index')}}" class="dropdown-item"> Show</a>
                                   <a class="dropdown-item" type="button">Add</a>
-                                  <a class="dropdown-item" type="button">Edit</a>
-                                  <a class="dropdown-item" type="button">Delet</a>
+                                  
                              </div>
                         </div>
 
