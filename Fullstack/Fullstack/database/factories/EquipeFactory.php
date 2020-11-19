@@ -22,6 +22,10 @@ class EquipeFactory extends Factory
     public function definition()
     {
         return [
+            'nom' => $this->faker->text(10),
+            'created_at'=>now(),
+            'updated_at'=>now(),
+            //
             //
         ];
     }
