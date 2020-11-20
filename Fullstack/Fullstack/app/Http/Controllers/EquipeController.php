@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class EquipeController extends Controller
 {
+
+    public  function list()
+    { $a =Equipe::all();;
+        return $a ;
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -96,7 +96,7 @@ class MatchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $id)
+    public function destroy( $id )
     {
         Match::find($id)->delete();
         return redirect()->route('Match.index')->with('message',' le match  est supprimée');
