@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class EquipeController extends Controller
 {
 
-    public  function list()
+    public  function ListEquipe()
     { $a =Equipe::all();;
         return $a ;
     }

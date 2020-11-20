@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class MatchController extends Controller
 {
+    public  function ListMatch()
+{ $a =Match::all();;
+    return $a ;
+}
     /**
      * Display a listing of the resource.
      *

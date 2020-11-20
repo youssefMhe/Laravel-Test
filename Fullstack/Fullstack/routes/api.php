@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('list', 'EquipeController@list');
+Route::get('ListEquipe', 'EquipeController@ListEquipe');
+Route::get('ListMatch', 'EquipeController@ListMatch');
 
 

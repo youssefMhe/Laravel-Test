@@ -167,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605781596017</updated>
       <workItem from="1605781599600" duration="993000" />
-      <workItem from="1605797917670" duration="41884000" />
+      <workItem from="1605797917670" duration="42200000" />
     </task>
     <servers />
   </component>
@@ -175,10 +175,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605896864976">
+    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605907769545">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1605896864976" />
+    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1605907769545" />
     <state x="634" y="353" key="NewPhpFileDialog" timestamp="1605810487750">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
