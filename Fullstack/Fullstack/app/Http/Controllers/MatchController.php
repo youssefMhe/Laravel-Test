@@ -85,11 +85,12 @@ class MatchController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Match  $match
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Match $match)
-    {
-        //
+    public function destroy( $id)
+    { var_dump($id);
+        Match::find($id)->delete();
+        return redirect()->route('Match.index')->with('message',' le match  est supprimée');
     }
 }
