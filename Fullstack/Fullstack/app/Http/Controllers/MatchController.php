@@ -60,26 +60,34 @@ class MatchController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Match  $match
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Match $match)
+    public function edit( $id)
     {
-        //
+        return view('Match.edit')->with('id',$id);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Match  $match
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Match $match)
+    public function update(Request $request,  $id)
     {
-        //
+        $e= Match::find($id);
+
+        $e->score = $request->score;
+        $e->equipe_visiteurs_id = $request->equipe_visiteurs_id;
+        $e->equipe_locaux_id = $request->equipe_locaux_id;
+
+        $e->updated_at=now();
+        $e->save();
+        return redirect()->route('Match.index')->with('message',' Match modifiée avec succès');
     }
 
     /**
@@ -89,7 +97,7 @@ class MatchController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy( $id)
-    { var_dump($id);
+    {
         Match::find($id)->delete();
         return redirect()->route('Match.index')->with('message',' le match  est supprimée');
     }

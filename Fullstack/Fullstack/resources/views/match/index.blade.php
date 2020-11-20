@@ -43,8 +43,10 @@
                 @endforeach()
                 <td>{{$match->created_at}}</td>
                 <td>{{$match->updated_at}}</td>
-                <td><a href="{{route('Match.edit', $match->id)}}" class="btn btn-primary">Edit</a>
-                    <a data-target="#delete{{$match->id}}" href="#" class="btn btn-danger" data-toggle="modal" > Delete</a></td>
+
+                <td> <a href="{{route('Match.edit', $match->id ) }}" class="btn btn-primary"> Edit </a>
+                     <a data-target="#delete{{$match->id}}" href="#" class="btn btn-danger" data-toggle="modal" > Delete</a>
+                </td>
 
                 <!-- Modal delete -->
                 <form action="{{route('Match.destroy', $match->id )}}" method="post">
