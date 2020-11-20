@@ -1,6 +1,13 @@
 @extends('home')
 
 @section('contenu')
+    <br>
+    @if(session('message'))
+        <div class="alert-success">
+            {{session('message')}}
+        </div>
+    @endif
+    <br>
 
 
     <h1 class="font-weight-bold">Liste des Matches </h1>
@@ -10,8 +17,8 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Score</th>
-            <th scope="col">id equipe locaux</th>
-            <th scope="col">id equipe visiteurs</th>
+            <th scope="col"> Equipe locaux</th>
+            <th scope="col"> Equipe visiteurs</th>
             <th scope="col">created at</th>
             <th scope="col">update at </th>
             <th scope="col">Action</th>
@@ -23,8 +30,17 @@
             <tr>
                 <th scope="row">{{$match->id}}</th>
                 <td>{{$match->score}}</td>
-                <td>{{$match->equipe_locaux_id}}</td>
-                <td>{{$match->equipe_visiteurs_id }}</td>
+
+                @foreach(\App\Models\Equipe::all() as $e)
+                    @if($e->id ==$match->equipe_locaux_id )
+                        <td>{{$e->nom}}   </td>
+                    @endif
+                @endforeach()
+                @foreach(\App\Models\Equipe::all() as $e)
+                    @if($e->id ==$match->equipe_visiteurs_id )
+                        <td>{{$e->nom}}   </td>
+                    @endif
+                @endforeach()
                 <td>{{$match->created_at}}</td>
                 <td>{{$match->updated_at}}</td>
                 <td>@fat</td>

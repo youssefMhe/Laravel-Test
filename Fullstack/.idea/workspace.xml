@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d4c68b-efbb-47a4-b8e3-7de530678b98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Fullstack/app/Http/Controllers/EquipeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Fullstack/app/Http/Controllers/EquipeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fullstack/app/Http/Controllers/MatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Fullstack/app/Http/Controllers/MatchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fullstack/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Fullstack/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fullstack/resources/views/match/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Fullstack/resources/views/match/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +144,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Fullstack/resources/views/equipe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Fullstack/resources/views/match" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -151,6 +153,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\Laravel-Test\Fullstack\Fullstack\resources\views\match" />
       <recent name="C:\Users\User\Documents\GitHub\Laravel-Test\Fullstack\Fullstack\resources\views\equipe" />
     </key>
   </component>
@@ -163,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605781596017</updated>
       <workItem from="1605781599600" duration="993000" />
-      <workItem from="1605797917670" duration="24043000" />
+      <workItem from="1605797917670" duration="27919000" />
     </task>
     <servers />
   </component>
@@ -171,10 +174,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605823527924">
+    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605892054448">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1605823527924" />
+    <state x="530" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1605892054448" />
     <state x="634" y="353" key="NewPhpFileDialog" timestamp="1605810487750">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

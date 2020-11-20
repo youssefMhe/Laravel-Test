@@ -25,7 +25,7 @@ class MatchController extends Controller
      */
     public function create()
     {
-        //
+        return view('match.create');
     }
 
     /**
@@ -36,7 +36,16 @@ class MatchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'score'=>'required|max:20|min:2' // methode de controle direct
+        ]);
+
+        $e = new Match();
+        $e->score = $request->score;
+        $e->equipe_visiteurs_id = $request->equipe_visiteurs_id;
+        $e->equipe_locaux_id = $request->equipe_locaux_id;
+        $e->save();
+        return redirect()->route('Match.index')->with('message','match est ajouté avec success');
     }
 
     /**
